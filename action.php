@@ -21,14 +21,14 @@ class action_plugin_sendpagecontent extends DokuWiki_Action_Plugin{
     }
 
     /**
-     * Handles sendmail action
+     * Handles sendpagecontent action
      */
     function handle_act_preprocess(&$event, $param) {
         global $ID;
         global $INFO;
         global $conf;
        
-        if ($event->data == 'sendmail') {
+        if ($event->data == 'sendpagecontent') {
             // we can handle it -> prevent others
             $event->preventDefault();
             $event->stopPropagation();
@@ -53,7 +53,7 @@ class action_plugin_sendpagecontent extends DokuWiki_Action_Plugin{
    
     function handle_tpl_act_unknown(&$event, $param) {
         global $ID;
-        if($event->data != 'sendmail') return false;
+        if($event->data != 'sendpagecontent') return false;
         $event->preventDefault();
         $event->stopPropagation();       
     }
