@@ -1,0 +1,6 @@
+author Matthias Schulte
+email  dokuwiki@lupo49.de
+date   2011-11-06
+name   sendpagecontent
+desc   Send the raw page content to a given mail address
+url    http://dokuwiki.org/plugin:sendpagecontent
